@@ -4,42 +4,62 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        // {
+        //     "name": "MEALS APP",
+        //     "cwd": "MEALS APP",
+        //     "request": "launch",
+        //     "type": "dart"
+        // },
+        // {
+        //     "name": "MEALS APP (profile mode)",
+        //     "cwd": "MEALS APP",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "MEALS APP (release mode)",
+        //     "cwd": "MEALS APP",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // },
+        // {
+        //     "name": "PERSONAL EXPENSES APP",
+        //     "cwd": "PERSONAL EXPENSES APP",
+        //     "request": "launch",
+        //     "type": "dart"
+        // },
+        // {
+        //     "name": "PERSONAL EXPENSES APP (profile mode)",
+        //     "cwd": "PERSONAL EXPENSES APP",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "PERSONAL EXPENSES APP (release mode)",
+        //     "cwd": "PERSONAL EXPENSES APP",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // },
         {
-            "name": "MEALS APP",
-            "cwd": "MEALS APP",
+            "name": "SHOP APP",
+            "cwd": "SHOP APP",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "MEALS APP (profile mode)",
-            "cwd": "MEALS APP",
+            "name": "SHOP APP (profile mode)",
+            "cwd": "SHOP APP",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "MEALS APP (release mode)",
-            "cwd": "MEALS APP",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "PERSONAL EXPENSES APP",
-            "cwd": "PERSONAL EXPENSES APP",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "PERSONAL EXPENSES APP (profile mode)",
-            "cwd": "PERSONAL EXPENSES APP",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "PERSONAL EXPENSES APP (release mode)",
-            "cwd": "PERSONAL EXPENSES APP",
+            "name": "SHOP APP (release mode)",
+            "cwd": "SHOP APP",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

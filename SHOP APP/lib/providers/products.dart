@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
-
 import 'package:flutter/material.dart';
+
 import './product.dart';
 
 class Products with ChangeNotifier {
@@ -38,11 +37,10 @@ class Products with ChangeNotifier {
           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
     ),
   ];
-
-  // var _showFavotitesOnly = false;
+  // var _showFavoritesOnly = false;
 
   List<Product> get items {
-    // if (_showFavotitesOnly) {
+    // if (_showFavoritesOnly) {
     //   return _items.where((prodItem) => prodItem.isFavorite).toList();
     // }
     return [..._items];
@@ -57,12 +55,12 @@ class Products with ChangeNotifier {
   }
 
   // void showFavoritesOnly() {
-  //   _showFavotitesOnly = true;
+  //   _showFavoritesOnly = true;
   //   notifyListeners();
   // }
 
   // void showAll() {
-  //   _showFavotitesOnly = false;
+  //   _showFavoritesOnly = false;
   //   notifyListeners();
   // }
 

@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/providers/product.dart';
-import 'package:flutter_complete_guide/screens/product_detail_screen.dart';
 import 'package:provider/provider.dart';
+
+import '../screens/product_detail_screen.dart';
+import '../providers/product.dart';
+import '../providers/cart.dart';
 
 class ProductItem extends StatelessWidget {
   // final String id;
   // final String title;
   // final String imageUrl;
 
-  // ProductItem(
-  //   this.id,
-  //   this.title,
-  //   this.imageUrl,
-  // );
+  // ProductItem(this.id, this.title, this.imageUrl);
 
   @override
   Widget build(BuildContext context) {
-    final product = Provider.of<Product>(
-      context,
-      listen: false,
-    );
+    final product = Provider.of<Product>(context, listen: false);
+    final cart = Provider.of<Cart>(context, listen: false);
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: GridTile(
@@ -30,25 +26,23 @@ class ProductItem extends StatelessWidget {
               arguments: product.id,
             );
           },
-          child: Image.network(product.imageUrl),
+          child: Image.network(
+            product.imageUrl,
+            fit: BoxFit.cover,
+          ),
         ),
         footer: GridTileBar(
-          backgroundColor: Colors.black54,
+          backgroundColor: Colors.black87,
           leading: Consumer<Product>(
-            builder: (
-              ctx,
-              product,
-              child,
-            ) =>
-                IconButton(
-              icon: Icon(
-                product.isFavorite ? Icons.favorite : Icons.favorite_border,
-              ),
-              color: Theme.of(context).accentColor,
-              onPressed: () {
-                product.toggleFavoriteStatus();
-              },
-            ),
+            builder: (ctx, product, _) => IconButton(
+                  icon: Icon(
+                    product.isFavorite ? Icons.favorite : Icons.favorite_border,
+                  ),
+                  color: Theme.of(context).accentColor,
+                  onPressed: () {
+                    product.toggleFavoriteStatus();
+                  },
+                ),
           ),
           title: Text(
             product.title,
@@ -58,8 +52,10 @@ class ProductItem extends StatelessWidget {
             icon: Icon(
               Icons.shopping_cart,
             ),
+            onPressed: () {
+              cart.addItem(product.id, product.price, product.title);
+            },
             color: Theme.of(context).accentColor,
-            onPressed: () {},
           ),
         ),
       ),
